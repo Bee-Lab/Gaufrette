@@ -23,6 +23,7 @@ class LocalTest extends FunctionalTestCase
     public function tearDown()
     {
         $this->filesystem = null;
+
         if (file_exists($this->directory)) {
             $iterator = new \RecursiveIteratorIterator(
                 new \RecursiveDirectoryIterator(
